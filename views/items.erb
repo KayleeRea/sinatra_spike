@@ -2,9 +2,9 @@
   <body>
   <h1>Items</h1>
   <ul>
-    <li><a href="/items/1">Item1</a></li>
-    <li><a href="/items/2">Item2</a></li>
-    <li><a href="/items/3">Item3</a></li>
+    <% [1, 2, 3].each do |item| %>
+      <li><a href="/items/<%= item %>">Item <%= item %></a></li>
+    <% end %>
   </ul>
   </body>
 </html>
