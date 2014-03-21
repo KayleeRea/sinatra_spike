@@ -11,6 +11,6 @@ class ItemContainer
 
   def add_menu_item(name)
     list_of_menu_items = self.menu
-    list_of_menu_items.push(Item.new(Time.now.to_i, name))
+    list_of_menu_items.push(Item.new(4, name))
   end
 end
