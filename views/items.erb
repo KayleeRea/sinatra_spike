@@ -6,5 +6,12 @@
       <li><a href="/items/<%= item.id %>">Item <%= item.name %></a></li>
     <% end %>
   </ul>
+  <form action="/items/new" method="post">
+    <div>
+      <label for="name">Add Menu Item:</label>
+      <input type="text" id="name" />
+      <button>Submit</button>
+    </div>
+  </form>
   </body>
 </html>

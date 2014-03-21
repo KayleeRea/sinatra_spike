@@ -1,6 +1,5 @@
 require 'sinatra'
 require './lib/item'
-require './lib/item_repository'
 require './lib/item_container'
 
 get '/' do
@@ -22,4 +21,8 @@ get '/items' do
     @displayed_items = array_of_items
   end
   erb :items
+end
+
+post '/items/new' do
+  erb :index
 end
