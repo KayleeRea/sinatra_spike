@@ -2,7 +2,7 @@
   <body>
   <h1>Items</h1>
   <ul>
-    <% ItemRepository.new.items.each do |item| %>
+    <% @displayed_items.each do |item| %>
       <li><a href="/items/<%= item.id %>">Item <%= item.name %></a></li>
     <% end %>
   </ul>
