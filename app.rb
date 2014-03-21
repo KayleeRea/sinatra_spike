@@ -25,13 +25,19 @@ end
 
 get '/items/:id' do
   array_of_items = ItemContainer.new.menu
+  @item_name = ""
 
   array_of_items.each do |item|
     if item.id == params[:id].to_i
       @item_name = item.name
     end
   end
-  erb :item_page
+
+  if @item_name.empty?
+    erb :not_found
+  else
+    erb :item_page
+  end
 end
 
 post '/items/new' do
