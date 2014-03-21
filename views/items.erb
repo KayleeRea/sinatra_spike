@@ -2,8 +2,8 @@
   <body>
   <h1>Items</h1>
   <ul>
-    <% [1, 2, 3].each do |item| %>
-      <li><a href="/items/<%= item %>">Item <%= item %></a></li>
+    <% ItemRepository.new.items.each do |item| %>
+      <li><a href="/items/<%= item.id %>">Item <%= item.name %></a></li>
     <% end %>
   </ul>
   </body>
