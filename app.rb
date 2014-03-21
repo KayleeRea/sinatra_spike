@@ -24,5 +24,6 @@ get '/items' do
 end
 
 post '/items/new' do
-  erb :index
+  @displayed_items = ItemContainer.new.add_menu_item(params[:new_item_name])
+  erb :items
 end
