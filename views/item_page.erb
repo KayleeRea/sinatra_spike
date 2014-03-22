@@ -2,6 +2,11 @@
   <body>
     <h1><%= @item_name %></h1>
     <a href="/items/<%= @item_id %>/edit">Edit Item</a>
+    <form action="/items/<%= @item_id %>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <div>
+        <button>Delete Item</button>
+      </div>
     </form>
   </body>
 </html>

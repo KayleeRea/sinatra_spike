@@ -67,10 +67,11 @@ post '/items/new' do
 end
 
 put '/items/:id' do
-  if ItemContainer.new.is_on_menu?(params[:id])
     @displayed_items = ItemContainer.new.update_menu_item(params[:id], params[:updated_item_name])
     erb :items
-  else
-    erb :not_fond
-  end
+end
+
+delete '/items/:id' do
+  @displayed_items = ItemContainer.new.delete_menu_item(params[:id])
+  erb :items
 end
