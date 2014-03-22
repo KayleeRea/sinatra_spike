@@ -1,0 +1,12 @@
+<html>
+  <body>
+    <form action="/items/<%= @item_id %>" method="post">
+      <input type="hidden" name="_method" value="put">
+      <div>
+        <label for="name">Change Menu Item:</label>
+        <input type="text" id="name" name="updated_item_name" value="<%= @item_name %>"/>
+        <button>Submit</button>
+      </div>
+  </form>
+  </body>
+</html>

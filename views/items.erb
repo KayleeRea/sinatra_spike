@@ -3,7 +3,7 @@
   <h1>Items</h1>
   <ul>
     <% @displayed_items.each do |item| %>
-      <li><a href="/items/<%= item.id %>">Item <%= item.name %></a></li>
+      <li><a href="/items/<%= item.id %>"><%= item.name %></a></li>
     <% end %>
   </ul>
   <form action="/items/new" method="post">
